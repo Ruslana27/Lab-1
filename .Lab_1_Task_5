@@ -1,0 +1,21 @@
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+number = '0123456789'
+encrypt = input("Enter a clear message:")
+key = int(input("Please enter a key:"))
+encrypted = ""
+
+for letter in encrypt:
+    position = alphabet.find(letter)
+    newPosition = position + key
+
+    if position > 25:
+        position -=26
+
+    if position > 9:
+        position -=10
+
+    if letter in alphabet:
+        encrypted = encrypted + alphabet[newPosition]
+    else:
+        encrypted = encrypted + letter
+print("Your cipher is: ", encrypted) 
