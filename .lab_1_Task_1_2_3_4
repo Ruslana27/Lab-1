@@ -1,0 +1,37 @@
+print("Hello world!")
+print("\t)
+
+s = input("Enter: ")
+print(s [::-1])
+print("\t")
+
+#s = input("Enter: ")
+#a = list(s)
+#a.reverse()
+#c = ''.join(a)
+#print(c)
+
+s = input("Enter: ")
+for i in s:
+    print(i * 2, end = '')
+print("\t")
+
+
+x = float(input("First number: "))
+y = float(input("Second number: "))
+operation = input("Operation: ")
+result = None
+
+if operation == '+':
+    result = x + y
+elif operation == "-":
+    result = x - y
+elif operation == '*':
+    result = x * y
+elif operation == '/':
+    result = x / y
+else:
+    print("Unsupported operation")
+
+if result is not None:
+    print("Result: ", result)
